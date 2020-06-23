@@ -1,0 +1,21 @@
+CREATE DATABASE  IF NOT EXISTS `greatbay` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `greatbay`;
+
+DROP TABLE IF EXISTS `bids`;
+CREATE TABLE `bids` (
+  `bid_id` INTEGER AUTO_INCREMENT PRIMARY KEY,
+  `item_id` INTEGER NOT NULL,
+  `date` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  `bid_amount` INTEGER DEFAULT NULL,
+  `bidder_name` VARCHAR(255) DEFAULT NULL
+);
+
+DROP TABLE IF EXISTS `items`;
+CREATE TABLE `items` (
+  `item` VARCHAR(100) PRIMARY KEY,
+  `desc` VARCHAR(255) DEFAULT NULL,
+  `maxBid` DECIMAL(4,2) DEFAULT '0.00',
+  `maxBidName` VARCHAR(30) DEFAULT ''
+);
+
+INSERT INTO `items` VALUES ('cat','fluffy friend',6.00,'Jeff'),('computer','macbook',0.00,'');

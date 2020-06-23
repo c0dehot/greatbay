@@ -1,0 +1,10 @@
+{
+  "name": "great-bay",
+  "version": "1.0.0",
+  "description": "activity for building app",
+  "main": "app.basic.js",
+  "dependencies": {
+    "inquirer": "^6.2.1",
+    "mysql": "^2.16.0"
+  }
+}
